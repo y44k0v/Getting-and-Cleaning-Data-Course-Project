@@ -11,4 +11,4 @@ The script "run_analysis.R" accomplishes the followisn tasks:
            
 The output from this files produces (partial view):
 
-![console_output](https://github.com/ykv001/Getting-and-Cleaning-Data-Course-Project/console.jpg)
+![console_output](https://github.com/ykv001/Getting-and-Cleaning-Data-Course-Project/blob/master/console.jpg)
