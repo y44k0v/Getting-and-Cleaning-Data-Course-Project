@@ -1,4 +1,5 @@
 library(plyr)
+library(reshape2)
 
 ## Gathering the data 
 fileUrl<-"https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
@@ -44,7 +45,18 @@ names(subject) <- "subject"
 
 data<-cbind(yData,subject,xData)
 
-## Average values for activity and subject
+## Average values for activity and subject with plyr Package
 
 meanData <- ddply(data, .(subject, activity), function(x) colMeans(x[, 2:68]))
-head(meanData, 20)
+head(meanData, 13)
+
+## Average values for activity and subject with reshape2 Package
+## better method no need to specify variable columns
+
+dataMelted <- melt(data, id = c("activity", "subject"))
+head(dataMelted)
+meanDataMelted <- dcast(dataMelted, activity + subject ~ variable, mean)
+head(meanDataMelted,13)
+write.table(meanDataMelted, "average.txt", row.names = FALSE, quote = FALSE)
+
+
