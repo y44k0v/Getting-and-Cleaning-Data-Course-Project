@@ -9,6 +9,10 @@ The script "run_analysis.R" accomplishes the followisn tasks:
    5.     From the data set in step 4, creates a second, independent tidy data set with the average of each variable
            for each activity and each subject.
            
-The output from this files produces (partial view):
+The output from this file produces (plyr library):
 
 ![console_output](https://github.com/ykv001/Getting-and-Cleaning-Data-Course-Project/blob/master/console.jpg)
+
+(reshape2 library):
+
+![console_output](https://github.com/ykv001/Getting-and-Cleaning-Data-Course-Project/blob/master/console2.jpg)
